@@ -1,0 +1,35 @@
+{
+    "data_params":{
+        "fold_means": [151.55743, 138.90703, 179.98677],
+        "fold_stds": [50.95315, 43.17401, 35.02942],
+        "in_h": 224,
+        "in_w": 224,
+        "n_genes": 785,
+        "num_workers": 0
+    },
+    "training_params":{
+        "batch_size": 32,
+        "total_epochs": 50,
+        "learning_rate": 0.000001,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "l2_reg_alpha": 0
+    },
+    "model_params":{
+        "initial_depth": 256
+    },
+    "save_freqs":{
+        "model_freq": 1
+    },
+    "data_source": {
+        "img_data_dir": "./her2st_processing/patches_resized",
+        "fold_splits": "./her2st_processing/4_fold_splits",
+        "labels_file": "./her2st_processing/processed_expr.csv"
+    },
+    "experiment_dirs": {
+        "load_dir": "last",
+        "model_dir" : "models",
+        "test_output_dir" : "test_output",
+        "val_output_dir" : "val_output"
+    }
+}
